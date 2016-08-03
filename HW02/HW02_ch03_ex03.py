@@ -44,21 +44,21 @@ def do_n_times(f, n):
    [f() for x in range(n)]
 
 def dashes():
-    print('-', end="")
+    print('-', end=" ")
 def spaces():
-    print(' ', end="")
+    print(' ', end=" ")
     
 def write_a_row():
-    print('+', end="")
+    print('+', end=" ")
     do_n_times(dashes, 4)
-    print('+', end="")
+    print('+', end=" ")
     do_n_times(dashes, 4)
     print('+', end="")
     print()
 def write_columns():
-    print('|', end="")
+    print('|', end=" ")
     do_n_times(spaces, 4)
-    print('|', end="")
+    print('|', end=" ")
     do_n_times(spaces, 4)
     print('|', end="")
     print()
