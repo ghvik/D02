@@ -20,13 +20,27 @@
 ################################################################################
 # Write your functions below:
 # Body
+from math import *
 
+def check_fermat(a, b, c, n):
+    lhs = pow(a, n) + pow(b, n)
+    rhs = pow(c, n)
+    if (n > 2):
+        if (lhs == rhs):
+            print("Holy smokes, Fermat was wrong!")
+        else:
+            print("No, that doesn't work")
 
-
-
-
-
-
+def check_fermat_ints():
+    a = input("Please type a number for a\n")
+    a = int(a)
+    b = input("Please type a number for b\n")
+    b = int(b)
+    c = input("Please type a number for c\n")
+    c = int(c)
+    n = input("Please type a number for n\n")
+    n = int(n)
+    check_fermat(a, b, c, n)
 
 
 # Write your functions above:
@@ -40,8 +54,8 @@ def main():
     check_fermat()
     """
     print("Hello World!")
-
-
+    #check_fermat(1,2,3,4)
+    check_fermat_ints()
 
 if __name__ == "__main__":
     main()
