@@ -9,8 +9,12 @@
 # Body
 
 def do_n(f, n):
-    [f() for x in range(n)]
-
+    if n == 0:
+        return
+    else:
+        f()
+        do_n(f, n - 1)
+    
 # Write your functions above:
 def print_hello():
     print("Hello World")
