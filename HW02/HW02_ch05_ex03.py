@@ -27,13 +27,10 @@ def is_triangle(a, b, c):
     isTri = True # this covers the degenerate case without explicitly checking for it
     if a > b + c:
        isTri = False
-       print("case 1")
     elif b > a + c:
         isTri = False
-        print("case 2")
     elif c > a + b:
         isTri = False
-        print("case 3")
     if isTri:
         print("Yes")
     else:
@@ -67,7 +64,7 @@ def main():
     is_triangle(1,5,3)
     is_triangle(6,2,3)
     
-    is_triangle_user()
+    #is_triangle_user()
 
 if __name__ == "__main__":
     main()
