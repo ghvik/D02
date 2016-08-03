@@ -23,14 +23,31 @@
 # Write your functions below:
 # Body
 
-
-
-
-
-
-
-
-
+def is_triangle(a, b, c):
+    isTri = True # this covers the degenerate case without explicitly checking for it
+    if a > b + c:
+       isTri = False
+       print("case 1")
+    elif b > a + c:
+        isTri = False
+        print("case 2")
+    elif c > a + b:
+        isTri = False
+        print("case 3")
+    if isTri:
+        print("Yes")
+    else:
+        print("No")
+        
+def is_triangle_user():
+    a = input("Please enter a value for one side of the triangle.\n")
+    b = input("Please enter a value for the second side of the triangle.\n")
+    c = input("Please enter a value for the third side of the triangle.\n")
+    a = int(a)
+    b = int(b)
+    c = int(c)
+    is_triangle(a, b, c)
+    
 # Write your functions above:
 ################################################################################
 def main():
@@ -45,8 +62,12 @@ def main():
     check_stick_lengths()
     """
     print("Hello World!")
-
-
+    is_triangle(1,2,3)
+    is_triangle(1,2,4)
+    is_triangle(1,5,3)
+    is_triangle(6,2,3)
+    
+    is_triangle_user()
 
 if __name__ == "__main__":
     main()
