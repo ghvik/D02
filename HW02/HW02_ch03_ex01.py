@@ -15,19 +15,20 @@
 # Write your function below:
 # Body
 
-
-
-
-
-
+def right_justify(myString):
+    space = ' '
+    length = len(myString)
+    lastColumn = 70
+    numberOfSpaces = lastColumn - length
+    rightJustified = numberOfSpaces*space + myString
+    print(rightJustified)
 
 # Write your function above:
 ################################################################################
 def main():
     """Call your functions within this function."""
-    print("Hello World!")
     right_justify("Python")
-    right_justify("YOUR_NAME")
+    right_justify("Vikram")
 
 if __name__ == "__main__":
     main()
