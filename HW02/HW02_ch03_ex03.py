@@ -40,17 +40,36 @@
 # Write your functions below:
 # Body
 
+def do_n_times(f, n):
+   [f() for x in range(n)]
 
-
-
-
-
-
-
-
-
-
-
+def dashes():
+    print('-', end="")
+def spaces():
+    print(' ', end="")
+    
+def write_a_row():
+    print('+', end="")
+    do_n_times(dashes, 4)
+    print('+', end="")
+    do_n_times(dashes, 4)
+    print('+', end="")
+    print()
+def write_columns():
+    print('|', end="")
+    do_n_times(spaces, 4)
+    print('|', end="")
+    do_n_times(spaces, 4)
+    print('|', end="")
+    print()
+    
+def draw_grid():
+    write_a_row()
+    do_n_times(write_columns, 4)
+    write_a_row()
+    do_n_times(write_columns, 4)
+    write_a_row()
+    
 # Write your functions above:
 ################################################################################
 def main():
@@ -60,9 +79,7 @@ def main():
     four_by_four()
     """
     print("Hello World!")
-    
-
-
+    draw_grid()
 
 if __name__ == "__main__":
     main()
